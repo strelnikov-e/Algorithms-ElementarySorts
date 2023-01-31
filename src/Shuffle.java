@@ -1,13 +1,13 @@
-import edu.princeton.cs.algs4.StdRandom;
-
 import java.util.Arrays;
+import java.util.Random;
 
 public class Shuffle {
+    static Random random = new Random();
 
     public static void shuffle(int[] a) {
         int n = a.length;
         for (int i  = 0; i < n; i++) {
-            int r = StdRandom.uniformInt(i+1);
+            int r = random.nextInt(i+1);
             exch(a,i,r);
         }
     }
